@@ -1,4 +1,4 @@
-/* 02 - Faça um programa em C que leia o nome do estudante, o número de matrícula, a nota das etapas N1 e N2, a média e o percentual de frequência. Antes da leitura de cada valor informe, respectivamente, Nome: Matricula: N1: N2: Media: Frequencia:
+/* Faça um programa em C que leia o nome do estudante, o número de matrícula, a nota das etapas N1 e N2, a média e o percentual de frequência. Antes da leitura de cada valor informe, respectivamente, Nome: Matricula: N1: N2: Media: Frequencia:
 
 Exiba a seguinte mensagem:
 

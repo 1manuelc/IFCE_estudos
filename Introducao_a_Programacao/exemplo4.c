@@ -1,4 +1,4 @@
-/* 04 - Escreva um algoritmo para dada uma temperatura em graus Fahrenheit, calcular e escrever o valor em graus Celsius (baseado na fórmula abaixo): C/5=(F-32)/9 
+/* Escreva um algoritmo para dada uma temperatura em graus Fahrenheit, calcular e escrever o valor em graus Celsius (baseado na fórmula abaixo): C/5=(F-32)/9 
 */
 
 #include<stdio.h>

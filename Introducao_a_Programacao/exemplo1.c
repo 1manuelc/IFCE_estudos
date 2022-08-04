@@ -1,4 +1,4 @@
-/* 01 - Faça um programa em C que leia o nome da disciplina, a quantidade de alunos e a média de alunos na turma. Em seguida, exiba a seguinte mensagem: A disciplina Programacao possui 30 alunos. A media da turma e 9,5.
+/* Faça um programa em C que leia o nome da disciplina, a quantidade de alunos e a média de alunos na turma. Em seguida, exiba a seguinte mensagem: A disciplina Programacao possui 30 alunos. A media da turma e 9,5.
 
 Neste exercício, considere que Programação, 30 e 9,5 são os valores informados pelo usuário. Antes da leitura de cada valor, escreva os seguintes textos, respectivamente: Disciplina: Qtde de alunos: Media da turma:
 
