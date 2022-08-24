@@ -32,7 +32,7 @@ void main(){
     printf("\nCartao de vacina do(a): %s\n", nomeDog);
     printf("\n\tDoses:\t\t1\t2\t3\t4\t5");
     printf("\n----------------------------------------------------------");
-    for(int i = 0; i <= 10; i++) {
+    for(int i = 0; i < 10; i++) {
         printf("\nVacina[%d]\t", i);
         for(int j = 0; j < 5; j++) {
             cartaoVacinaDog[i][j] = rand() % 2;
@@ -42,7 +42,7 @@ void main(){
                 printf("\t-");
         }
 
-        if(i == 10) {
+        if(i == 9) {
             printf("\n");
             printf("----------------------------------------------------------\n\n");
         }
