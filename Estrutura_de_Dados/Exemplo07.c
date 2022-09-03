@@ -23,7 +23,6 @@ int fatorialIt(int num) {
 
 int main() {
     int n;
-    char escolha;
     printf("Digite um valor acima de 1: ");
     scanf("%d", &n);
 
