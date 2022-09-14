@@ -8,15 +8,15 @@ O professor Miguel desafiou os estudantes do 1º semestre de Computação com um
 
 int main()
 {
-    int colunaInicial, linhaInicial, colunaFinal, linhaFinal, diferencaLC;
+    int colunaInicial, linhaInicial, colunaFinal, linhaFinal, difLinhasCols;
 
     scanf("%d", &colunaInicial);
     scanf("%d", &linhaInicial);
     scanf("%d", &colunaFinal);
     scanf("%d", &linhaFinal);
 
-    diferencaLC = colunaFinal - colunaInicial + linhaFinal - linhaInicial + 1;
+    difLinhasCols = colunaFinal - colunaInicial + linhaFinal - linhaInicial + 1;
 
-    printf("%d", diferencaLC);
+    printf("%d", difLinhasCols);
     return 0;
 }

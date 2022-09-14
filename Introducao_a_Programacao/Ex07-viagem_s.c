@@ -6,7 +6,7 @@ Entrada
 A entrada consiste de 6 linhas. Primeira linha contém um inteiro D1. Segunda linha contém um inteiro H1. Terceira linha contém um inteiro M1. Quarta linha contém um inteiro D2. Quinta linha contém em um inteiro H2. Terceira linha contém um inteiro M2.
 
 Saída
-Seu programa deve imprimir uma linha com a quantidade de segundos igual ao tempo da viajem de Bino.
+Seu programa deve imprimir uma linha com a quantidade de segundos igual ao tempo da viagem de Bino.
 
 Exemplo de Entrada	Exemplo de Saída
 5 10 25 5 11 25	    3600
