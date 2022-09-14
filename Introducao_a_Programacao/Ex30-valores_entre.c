@@ -9,8 +9,7 @@ A saída é composta de uma linha contendo todos os inteiros no intervalo fechad
 */
 #include <stdio.h>
 
-int main()
-{
+int main() {
     int numeroA, numeroB;
     scanf("%d%d", &numeroA, &numeroB);
     
@@ -21,6 +20,5 @@ int main()
         for(int i = numeroB; i <= numeroA; i++)
             printf("%d ", i);
     }
-    
     return 0;
 }
