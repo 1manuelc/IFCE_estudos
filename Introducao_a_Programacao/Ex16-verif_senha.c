@@ -12,8 +12,8 @@ void main() {
     scanf("%d", &senha);
 
     if(senha == 123456)
-        printf("S\n");
+        printf("S");
     else
-        printf("N\n");
+        printf("N");
     system("pause");
 }
