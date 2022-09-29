@@ -1,29 +1,40 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define diasEvento 3
 
-void alocar(int **matriculas, int *alunosDia) {
-    matriculas = (int**)malloc(diasEvento * sizeof(int*));  // matriculas[i]
-    alunosDia = (int*)malloc(diasEvento * sizeof(int));     // alunosDia[i]
-
-    // preencher qtde de alunos e matriculas em cada dia
-    for(int i = 0; i < diasEvento; i++) {
+int *povoarAlunos(int alunosDia[]) {
+    for(int i = 0; i < 3; i++) {
         printf("Alunos no dia %d: ", i);
         scanf("%d", &alunosDia[i]);
-        matriculas[i] = (int*)malloc(alunosDia[i] * sizeof(int));
     }
+
+    return alunosDia;
 }
 
-void obterMatriculas(int **matriculas, int *alunosDia) {
-    for(int i = 0; i < diasEvento; i++) {
+int **alocarMatriculas(int alunosDia[]) {
+    int **matriculas;
+    matriculas = (int**)calloc(3, sizeof(int*));  // matriculas[i]
+
+    if(matriculas != NULL) {
+        for(int i = 0; i < 3; i++)
+            matriculas[i] = (int*)calloc(alunosDia[i], sizeof(int));
+    } else
+        printf("Erro ao alocar");
+
+    return matriculas;
+}
+
+int **obterMatriculas(int **matriculas, int alunosDia[]) {
+    for(int i = 0; i < 3; i++) {
         for(int j = 0; j < alunosDia[i]; j++) {
             printf("Dia %d Aluno: %d: ", i, j);
             scanf("%d", &matriculas[i][j]);
         }
     }
+
+    return matriculas;
 }
 
-void exibirMatriculas(int **matriculas, int *alunosDia, int escolha) {
+void exibirMatriculas(int **matriculas, int alunosDia[], int escolha) {
     printf("\n\n");
     for(int i = 0; i < alunosDia[escolha]; i++) {
         printf("\n%d\n", matriculas[escolha][i]);
@@ -31,15 +42,17 @@ void exibirMatriculas(int **matriculas, int *alunosDia, int escolha) {
 }
 
 void liberarMatriculas(int **matriculas) {
-    for(int i = 0; i < diasEvento; i++)
+    for(int i = 0; i < 3; i++)
         free(matriculas[i]);
     free(matriculas);
 }
 
 void main() {
-    int **matriculas, *alunosDia, escolha = 0;
+    int **matriculas, alunosDia[3], escolha = 0;
 
-    alocar(matriculas, alunosDia);
+    povoarAlunos(alunosDia);
+
+    alocarMatriculas(alunosDia);
 
     obterMatriculas(matriculas, alunosDia);
 
