@@ -6,8 +6,9 @@ Escreva uma função capaz de ler uma matriz 2x3 (a matriz é repassada como par
 
 void invert(int mat[2][3], int matInv[3][2]) {
     for(int lin = 0; lin < 2; lin++)
-        for(int col = 0; col < 3; col++)
+        for(int col = 0; col < 3; col++) {
             matInv[col][lin] = mat[lin][col];
+        }
 }
 
 void write (int matrix[2][3]) {
