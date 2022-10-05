@@ -1,3 +1,16 @@
+/*
+
+Implemente funções que recebam por parâmetro uma matriz capaz de armazenar valores reais e seu tamanho. As funções devem seguir a seguinte assinatura: (int linha, int coluna, float **mat).
+O programa deve:
+
+- Alocar dinamicamente a matriz;
+- Ler os valores da matriz (as dimensões devem ser lidas no programa principal);
+- Multiplicar a matriz por um valor escalar (lido após a leitura de todos os dados da matriz);
+- Exibir a matriz em um formato apropriado (observe a saída esperada).
+
+
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 

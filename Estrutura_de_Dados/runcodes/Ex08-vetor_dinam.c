@@ -1,3 +1,28 @@
+/*
+
+Escreva um programa em que leia uma sequência de código de operação e valor, onde o código de operação é um inteiro com os seguintes valores:
+
+0 (zero): fim
+1 (um): inserção
+2 (dois): remoção
+O valor lido é do tipo float e deve ser inserido em um vetor (caso a operação seja 1), ou removido do vetor (caso a operação seja 2). No final do programa o vetor resultante deve ser impresso.
+
+Exemplo (leituras):
+1
+34.5
+1
+60.1
+1
+43.2
+2
+1
+10.2
+0
+(saída esperada):
+{34.5, 60.1, 10.2}
+
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
