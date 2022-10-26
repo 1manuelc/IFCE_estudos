@@ -46,10 +46,7 @@ int main() {
     if(qtLivros <= 0)
         printf("[Nenhum registro lido]");
 
-    Livro Livros;
     Livro *pLivros; 
-
-    pLivros = &Livros;
 
     pLivros = alocar_livros(qtLivros);
     
