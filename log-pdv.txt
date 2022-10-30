@@ -1,2 +1,0 @@
-Nome: Manteiga	Qtd: 1000	Valor/pote R$ 5,00	50/1/5	2022
-Nome: Manteiga	Qtd: 1000	Valor/kg R$ 10,00	1/5/2022	214415
