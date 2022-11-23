@@ -5,100 +5,85 @@
 typedef struct pilha TPilha, *PPilha;
 typedef char TDado;
 
-struct pilha{
+struct pilha {
     TDado dado;
-    PPilha prox;
+    struct pilha *prox;
 };
 
-PPilha pilha_cria(PPilha p) {
-    p = (PPilha)malloc(sizeof(TPilha));
-    p->prox = NULL;
-    return p;
+PPilha pilha_empilha(PPilha p, TDado inserir);
+void pilha_exibe(PPilha p);
+void pilha_esvazia(PPilha p);
+void flush_in();
+
+int main() {
+    PPilha pilha = (PPilha)malloc(sizeof(TPilha));
+    pilha = NULL;
+    TDado inserir, removido;
+    char entrada[10];
+
+    if(pilha == NULL) {
+        printf("Digite:\n");
+        printf("-s para exibir a pilha\n");
+        printf("-c para esvaziar a pilha\n");
+        printf("-i char para empilhar um char\n");
+        printf("-r para desempilhar o ultimo char\n");
+
+        do{
+            scanf("%[^\n]", entrada);
+            flush_in();
+        
+            if(strcmp(entrada, "-s") == 0)
+                pilha_exibe(pilha);
+            //else if(strcmp(entrada, "-c") == 0)
+            else if(strcmp(entrada, "-i") == 0) {
+                scanf("%c", inserir);
+                flush_in();
+
+                pilha_empilha(pilha, inserir);
+            } else if(strcmp(entrada, "-r") == 0)
+                pilha_esvazia(pilha);
+        }while((strcmp(entrada, "-s") != 0));
+    } else {
+        printf("Erro ao criar a pilha\n");
+    }
+
+
+    system("pause");
+    return 0;
 }
 
-PPilha pilha_push(PPilha p, int *pQtd, TDado dado) {
+PPilha pilha_empilha(PPilha p, TDado inserir) {
     PPilha novo = (PPilha)malloc(sizeof(TPilha));
-
     if(novo) {
+        printf("Entrou\n");
+        novo->dado = inserir;
         novo->prox = p;
-        *pQtd++;
         return novo;
     } else {
-        printf("Erro ao realizar push!\n");
+        printf("Erro ao empilhar novo elemento\n");
         return NULL;
     }
 }
 
-void pilha_exibe(PPilha p, int *pQtd) {
-    PPilha aux = p;
-    if(aux) {
-        if(*pQtd == 0)
-            printf("Pilha vazia\n");
-        else {
-            while(aux->prox != NULL) {
-                printf("%c", aux->dado);
-                aux = aux->prox;
-            }
+void pilha_exibe(PPilha p) {
+    PPilha exibe = (PPilha)malloc(sizeof(TPilha));
+    exibe = p;
+
+    if(exibe == NULL)
+        printf("Pilha vazia\n");
+    else {
+        while(exibe->prox != NULL) {
+            printf("%c", exibe->dado);
+        exibe = exibe->prox;
         }
-    } else {
-        printf("Erro ao exibir!\n");
     }
 }
 
-PPilha pilha_pop(PPilha *p, int *pQtd) {
-    PPilha remove;
-    if(p) {
-        remove = *p;
-        *p = remove->prox;
-        pQtd--;
-        return remove;
-    } else {
-        printf("Erro ao remover\n");
-        return NULL;
-    }
-}
-
-void pilha_esvaziar(PPilha p, PPilha remove, int *pQtd) {
-    free(p);
-    free(remove);
-    *pQtd = 0;
+void pilha_esvazia(PPilha p) {
+    p = NULL;
 }
 
 void flush_in() {
     char ch;
-    while( (ch = fgetc(stdin)) != EOF && ch != '\n' ){}
-}
-
-int main() {
-    PPilha pilha, remove;
-    TDado dado;
-    char entrada[10];
-    int contador = 0, *pQtd = &contador;
-    pilha = pilha_cria(pilha);
-
-    if(pilha) {
-        if(pilha->prox == NULL) {
-            do {
-                scanf("%s", entrada);
-
-                if(strcmp(entrada, "-s") == 0)
-                    pilha_exibe(pilha, pQtd);
-                else if(strcmp(entrada, "-c") == 0)
-                    pilha_esvaziar(pilha, remove, pQtd);
-                else if(strcmp(entrada, "-i") == 0) {
-                    scanf("%c", &dado);
-                    flush_in();
-                    pilha_push(pilha, pQtd, dado);
-                } else if(strcmp(entrada, "-r") == 0)
-                    remove = pilha_pop(&pilha, pQtd);
-            }while(*pQtd != 100);
-        } else
-            printf("Erro ao criar pilha\n");
-    } else {
-        printf("Erro ao alocar pilha\n");
-        exit(0);
-    }
-
-    system("pause");
-    return 0;
+    while((ch = fgetc(stdin)) != EOF && ch != '\n'){}
 }

@@ -1,0 +1,65 @@
+# Anotações aula 23/11
+
+LISTAS ENCADEADAS
+    
+    Não tem limitação relacionada a inserção/remoção de elementos, diferentemente de pilha e fila
+    Insere-se e remove-se de qualquer lugar
+
+    01. Lista simplesmente encadeada
+
+        struct lista {  // descritor
+            *inicio
+            *fim
+            qtdElementos
+        }
+
+        struct elemento {
+            dado
+            *pProx
+        }
+
+        // Ponteiro apontando para o prox encadeado     | dado | pProx | ----> | dado2 | NULL | (final da lista)
+        // Para inserir um novo dado e ponteiro entre existentes, o antecessor aponta para o novo e o novo aponta para seu  sucessor
+        // Mesma coisa para remover um dado, o ponteiro do antecessor aponta para o sucessor do removido
+
+    02. Lista duplamente encadeada
+
+        struct lista {  // descritor
+            *inicio
+            *fim
+            qtdElementos
+        }
+
+        struct elemento {
+            *pAnterior
+            dado
+            *pProx
+        }
+
+        // Ponteiros do primeiro encadeado    | NULL | dado | pProx | ---> | pAnterior | dado | pProx | ---> | pAnterior | dado | NULL | (fim da lista)
+        // Lista duplamente encadeada facilita a busca por conta do sentido da mesma, podendo começar pelo primeiro ou pelo último ponteiro
+
+    
+    
+    #   Diferenças entre as duas implementações de lista
+
+        01. Memória
+            Duplamente encadeada gasta mais memória por conter o dobro de ponteiros
+
+        02. Eficiência
+            Duplamente encadeada é mais eficiente para busca, podendo partir de pontos diferentes da lista
+
+        !   Usa-se a simples para casos em que a prioridade é inserir;
+        !   Usa-se a dupla para casos em que a prioridade é buscar e remover.
+
+
+    Variações Circulares das duas implementações
+
+        01. Lista simplesmente encadeada CIRCULAR
+            O último pProx aponta para o inicio
+
+        02. Lista duplamente encadeada CIRCULAR
+            O último pProx aponta para o inicio
+            O primeiro pAnterior aponta para o fim
+
+        !   Usar qtdElementos para evitar operações com loop infinito dentro das listas circulares
