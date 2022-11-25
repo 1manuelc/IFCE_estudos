@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-
-typedef struct elemento Elem;
-typedef struct pilha Pilha;
+#include "pilha.h"
 
 struct elemento {
     char dado;
@@ -97,39 +94,13 @@ void pilha_exibir(Pilha *pilha) {
         printf("Pilha vazia\n");
     } else {
         while(aux != NULL) {
-            printf("%c", aux->dado);
-            aux = aux->prox;
-        }
+            char vetor[pilha->qtdElem];
+            for(int i = 0; i < pilha->qtdElem; i++) {
+                vetor[i] = aux->dado;
+                aux = aux->prox;
+            }
+            for(int i = pilha->qtdElem - 1; i >= 0; i--)
+                printf("%c", vetor[i]);
+        } printf("\n");
     }
-}
-
-void flush_in() {
-    char ch;
-    while((ch = fgetc(stdin)) != EOF && ch != '\n'){}
-}
-
-int main() {
-    Pilha *pilha = pilha_criar();
-    char opcao[4], inserir;
-    
-    do {
-        scanf("%s", opcao);
-        flush_in();
-
-        if(strcmp("-s", opcao) == 0)
-            pilha_exibir(pilha);
-        if(strcmp("-c", opcao) == 0)
-            pilha_limpar(pilha);
-        if(strcmp("-i", opcao) == 0) {
-            scanf("%c", &inserir);
-            printf("%c", inserir);
-            pilha_push(pilha, inserir);
-        } if(strcmp("-r", opcao) == 0)
-            pilha_pop(pilha);
-    }while(strcmp("-s", opcao) != 0);
-
-    pilha_destruir(pilha);
-
-    system("pause");
-    return 0;
 }
