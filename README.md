@@ -1,2 +1,2 @@
 # IFCE - Estudos
-Estudos feitos estudando Bacharelado em Ciência da Computação, separados por disciplina
+Estudos feitos no curso Bacharelado em Ciência da Computação, separados por semestres e disciplina(s)
