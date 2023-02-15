@@ -1,7 +1,7 @@
 package aulas.poo;
 
 public class Quadrado_Retangulo {
-    private double base, altura, area;
+    private double base, altura;
 
     public void setBase(double base) {
         this.base = base;

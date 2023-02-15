@@ -1,7 +1,7 @@
 package aulas.poo;
 
 public class Triangulo {
-    private double base, altura, area;
+    private double base, altura;
 
     public void setBase(double base) {this.base = base;}
 

@@ -1,7 +1,7 @@
 package aulas.poo;
 
 public class Circulo {
-    private double raio, pi = 3.1415, area;
+    private double raio, pi = 3.1415;
 
     public void setRaio(double raio) {
         this.raio = raio;
