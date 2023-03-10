@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class Exemplo1 {
     public static void main(String[] args) {
-        Scanner ler = new Scanner(System.in);
+        Scanner in = new Scanner(System.in); {
+        
         int n = 10; // tamanho do vetor
         int v[] = new int[n]; // declaração do vetor "v"
         int i; // índice ou posição
@@ -10,8 +11,10 @@ public class Exemplo1 {
         // Entrada de Dados
         for (i=0; i<n; i++) {
             System.out.printf("Informe %2do. valor de %d: ", (i+1), n);
-            v[i] = ler.nextInt();
-        }
+            v[i] = in.nextInt();
+        } 
+        
+        
 
         // Processamento: somar todos os valores, definir o maior e o menor valor
         int soma = 0;
@@ -28,7 +31,7 @@ public class Exemplo1 {
         }
 
         // Saída (resultados)
-         System.out.printf("\n");
+        System.out.printf("\n");
 
         for (i=0; i<n; i++) {
             if (v[i] == menor)
@@ -38,5 +41,7 @@ public class Exemplo1 {
             else System.out.printf("v[%d] = %2d\n", i, v[i]);
         }
         System.out.printf("\nSoma = %d\n", soma);
+        in.close();
+        }
     }
 }
