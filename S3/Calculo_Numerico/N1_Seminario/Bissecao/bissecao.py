@@ -66,13 +66,13 @@ def imprimir_resultado(statusErro, raiz, nIteracoes):
 
 def plotar(coordenadas):
     iterac = []
-    intervDelta = []
+    valorRaiz = []
 
     for i in coordenadas:
         iterac.append(i[0]) #posição 0, k
-        intervDelta.append(i[5]) #posição 7, x
+        valorRaiz.append(i[5]) #posição 7, x
 
-    pyplot.plot(iterac,intervDelta)
+    pyplot.plot(iterac,valorRaiz)
     pyplot.title('Gráfico de Convergência - Método da Bisseção')
     pyplot.show()
 
