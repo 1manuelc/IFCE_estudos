@@ -9,7 +9,7 @@ from matplotlib import pyplot
     # r: vetor de coordenadas para plotagem
 
 def f(x):
-    return m.sin(x) - e ** x
+    return m.sin(x) - (e ** x)
 
 def falsa_posicao(f, a, b, epsilon, maxIteracoes):
     fa = f(a)
@@ -23,7 +23,7 @@ def falsa_posicao(f, a, b, epsilon, maxIteracoes):
     
     intervaloAtual = abs(b - a)
 
-    coord.append((0, a, fa, b, fb, 0, 0, intervaloAtual))
+    coord.append((0, 0))
 
     # checando se a diferenca do intervalo ja nao 
     # esta proxima o suficiente da tolerancia
@@ -37,12 +37,12 @@ def falsa_posicao(f, a, b, epsilon, maxIteracoes):
     if(abs(fb) <= epsilon):
         return(True, 0, b, coord)
     
-    for k in range(1, maxIteracoes + 1):
+    for k in range(1, maxIteracoes):
         # calculando xk como secante
         x = ((a * fb) - (b * fa)) / (fb - fa)
         fx = f(x)
 
-        coord.append((k, a, fa, b, fb, x, fx, intervaloAtual))
+        coord.append((k, x))
 
         # checando se o valor de fx ja nao esta proximo
         # o suficiente da tolerancia
@@ -63,14 +63,14 @@ def falsa_posicao(f, a, b, epsilon, maxIteracoes):
         if(intervaloAtual <= epsilon):
             return(False, k, x, coord)
     
-    print("Numero maximo de interacoes alcancado")
+    print("Número máximo de interações alcancado")
     return(True, k, x, coord)
 
 def imprimir_resultado(statusErro, raiz, nIteracoes):
     if(statusErro):
-        print("Erro no metodo da bissecao apos %s iteracoes", nIteracoes)
+        print("Erro no método da falsa posição após %s iterações", nIteracoes)
     if(raiz != None):
-        print("Metodo da Bissecao\nRaiz %s encontrada com %s iteracoes" % (raiz, nIteracoes))
+        print("Método da Falsa Posição\nRaiz %s encontrada com %s iterações" % (raiz, nIteracoes))
 
 def plotar(coordenadas):
     iterac = []
@@ -78,10 +78,13 @@ def plotar(coordenadas):
 
     for i in coordenadas:
         iterac.append(i[0]) #posição 0, k
-        valorRaiz.append(i[5]) #posição 5, x
-
+        valorRaiz.append(i[1]) #posição 1, x
+    
+    fig, ax = pyplot.subplots()
+    ax.set(xlabel='Iterações', ylabel='Raiz',
+    title='Gráfico de Convergência - Método da Falsa Posição')
+    ax.grid()
     pyplot.plot(iterac,valorRaiz)
-    pyplot.title('Gráfico de Convergência - Método da Falsa Posição')
     pyplot.show()
 
 (haErro, iteracoes, raiz, coordenadas) = falsa_posicao(f, -4, -2, 0.0001, 50)

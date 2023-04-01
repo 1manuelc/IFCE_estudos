@@ -9,7 +9,7 @@ from matplotlib import pyplot
     # r: vetor de coordenadas para plotagem
 
 def f(x):
-    return m.sin(x) - e ** x
+    return m.sin(x) - (e ** x)
 
 def bissecao(f, a, b, epsilon, maxIteracoes):
     fa = f(a)
@@ -30,9 +30,8 @@ def bissecao(f, a, b, epsilon, maxIteracoes):
     if(intervaloAtual <= epsilon):
         return(False, k, x, coord)
     
-    coord.append((0, a, fa, b, fb, x, fx, intervaloAtual))
-
-    k = 0
+    k = 1
+    coord.append((k, x))
 
     while(k <= maxIteracoes):
         if (fa * fx > 0):
@@ -45,24 +44,23 @@ def bissecao(f, a, b, epsilon, maxIteracoes):
         intervaloAtual = abs(b - a)
         x = (a + b) / 2
         fx = f(x)
-
-        coord.append((k, a, fa, b, fb, x, fx, intervaloAtual))
+        k += 1
+        
+        coord.append((k, x))
 
         # checando se a diferenca do intervalo ja nao 
         # esta proxima o suficiente da tolerancia
         if(intervaloAtual <= epsilon):
             return(False, k, x, coord)
-        
-        k += 1
     
     print("Numero maximo de interacoes alcancado")
     return(True, k, x, coord)
 
 def imprimir_resultado(statusErro, raiz, nIteracoes):
     if(statusErro):
-        print("Erro no metodo da bissecao apos %s iteracoes", nIteracoes)
+        print("Erro no metodo da bisseção após %s iterações", nIteracoes)
     if(raiz != None):
-        print("Metodo da Bissecao\nRaiz %s encontrada com %s iteracoes" % (raiz, nIteracoes))
+        print("Metodo da Bisseção\nRaiz %s encontrada com %s iterações" % (raiz, nIteracoes))
 
 def plotar(coordenadas):
     iterac = []
@@ -70,10 +68,14 @@ def plotar(coordenadas):
 
     for i in coordenadas:
         iterac.append(i[0]) #posição 0, k
-        valorRaiz.append(i[5]) #posição 7, x
+        valorRaiz.append(i[1]) #posição 1, x
+
+    fig, ax = pyplot.subplots()
+    ax.set(xlabel='Iterações', ylabel='Raiz',
+    title='Gráfico de Convergência - Método da Bisseção')
+    ax.grid()
 
     pyplot.plot(iterac,valorRaiz)
-    pyplot.title('Gráfico de Convergência - Método da Bisseção')
     pyplot.show()
 
 (haErro, iteracoes, raiz, coordenadas) = bissecao(f, -4, -2, 0.0001, 50)
