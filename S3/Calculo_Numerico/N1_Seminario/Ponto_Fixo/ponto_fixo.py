@@ -13,7 +13,7 @@ def f(x):
 
 # funcao de iteracao
 def phi(x):
-    return x + m.sin(x) - (e ** x)
+    return m.sin(x) + x - (e ** x)
 
 def ponto_fixo(f, phi, epsilon, maxIteracoes):
     x = -3
