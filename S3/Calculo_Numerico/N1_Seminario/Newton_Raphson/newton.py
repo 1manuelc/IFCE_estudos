@@ -32,7 +32,6 @@ def newton(phi, epsilon, maxIteracoes):
         x = phi(x)
         k += 1
 
-        print(k, x)
         coord.append((k, x))
 
         if(abs(f(x)) <= epsilon):
