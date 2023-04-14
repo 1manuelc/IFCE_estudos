@@ -42,6 +42,7 @@ def falsa_posicao(f, a, b, epsilon, maxIteracoes):
         x = ((a * fb) - (b * fa)) / (fb - fa)
         fx = f(x)
 
+        print(k, x)
         coord.append((k, x))
 
         # checando se o valor de fx ja nao esta proximo

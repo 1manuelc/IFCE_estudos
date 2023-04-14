@@ -31,6 +31,7 @@ def bissecao(f, a, b, epsilon, maxIteracoes):
         return(False, k, x, coord)
     
     k = 1
+    print(k, x)
     coord.append((k, x))
 
     while(k <= maxIteracoes):
@@ -46,6 +47,7 @@ def bissecao(f, a, b, epsilon, maxIteracoes):
         fx = f(x)
         k += 1
         
+        print(k, x)
         coord.append((k, x))
 
         # checando se a diferenca do intervalo ja nao 
