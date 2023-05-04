@@ -25,7 +25,11 @@ def main():
     plot(x,y)
     
 def plot(x,y):
+    pX = [-3, -2, 1, 2, 4, 7]
+    pY = [18.1, 6, 3, 4, 19, 46]
+
     plt.grid()
+    plt.scatter(pX, pY)
     plt.plot(x, y)
     plt.show()
 
