@@ -1,0 +1,49 @@
+USE SistemaAcademicoBCC
+
+UPDATE tbCoordenador
+	SET COO_UF = 'CE'
+	WHERE
+		COO_UF NOT LIKE '__'
+		
+UPDATE tbCoordenador
+SET COO_NUMERO = 0
+WHERE
+		COO_NUMERO IS NULL
+		
+UPDATE tbCoordenador
+SET COO_CIDADE = 'Viçosa do Ceará'
+WHERE
+	COO_CIDADE LIKE 'VI[ÇC]OSA DO CEAR[ÁA]' OR
+	COO_CIDADE LIKE 'VI[ÇC]OSA'
+
+UPDATE tbCoordenador
+SET COO_NUMERO = NULL, COO_RUA = 'Rua Central'
+WHERE
+	(COO_RUA LIKE 'RUA A') AND (COO_CIDADE LIKE 'VI[ÇC]OSA DO CEAR[ÁA]')
+
+UPDATE tbCoordenador
+SET COO_CIDADE = 'Tianguá', COO_RUA = 'Rua A', COO_UF = 'CE'
+WHERE
+	COO_CODIGO BETWEEN 7 AND 15
+
+UPDATE tbCoordenador
+SET COO_TEMPO_SERVICO = 2
+WHERE
+	COO_CIDADE LIKE 'TIANGU[ÁA]'
+
+UPDATE tbCoordenador
+SET COO_TEMPO_SERVICO += 3
+WHERE
+	COO_CIDADE IN ('Tianguá', 'Ubajara', 'Ibiapina')
+
+UPDATE tbCoordenador
+SET COO_CPF = 'CPF inválido'
+WHERE
+	COO_CPF NOT LIKE '[0-9][0-9][0-9].[0-9][0-9][0-9].[0-9][0-9][0-9]-[0-9][0-9]'
+		SELECT * FROM tbCoordenador
+
+UPDATE tbCoordenador
+SET COO_OBSERVACAO = COO_CIDADE
+WHERE
+	COO_NUMERO IS NULL AND
+	COO_CIDADE LIKE 'TIANGU[ÁA]'
