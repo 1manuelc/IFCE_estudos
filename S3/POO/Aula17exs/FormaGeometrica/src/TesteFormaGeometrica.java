@@ -18,8 +18,8 @@ public class TesteFormaGeometrica {
             imprimirMenu();
             opcao = sc.nextInt();
 
-            switch (opcao) {
-                case 1 -> {
+            switch(opcao) {
+                case 1:
                     Circulo circ = new Circulo();
                     System.out.println("Digite o raio do círculo:");
                     circ.setRaio(sc.nextDouble());
@@ -27,8 +27,9 @@ public class TesteFormaGeometrica {
                     System.out.println("\nCírculo de raio = " + circ.getRaio() + ":");
                     System.out.println("Área = " + circ.getArea());
                     System.out.println("Comprimento = " + circ.getComprimento());
+                    break;
 
-                } case 2 -> {
+                case 2:
                     Quadrado quad = new Quadrado();
                     System.out.println("Digite o lado do quadrado:");
                     quad.setLado(sc.nextDouble());
@@ -36,10 +37,10 @@ public class TesteFormaGeometrica {
                     System.out.println("\nQuadrado de lado = " + quad.getLado() + ":");
                     System.out.println("Área = " + quad.getArea());
                     System.out.println("Perímetro = " + quad.getComprimento());
+                    break;
 
-                } default -> {
+                default:
                     if (opcao != 0) System.out.println("Opcão inválida, digite um número entre 0 e 2.");
-                }
             }
         } while(opcao != 0);
 

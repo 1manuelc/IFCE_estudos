@@ -28,26 +28,29 @@ public class TesteOperacao {
                 y = sc.nextDouble();
             }
 
-            switch (opcao) {
-                case 1 -> {
+            switch(opcao) {
+                case 1:
                     Soma add = new Soma();
                     System.out.println(x + " + " + y + " = " + add.calcula(x, y));
+                    break;
 
-                } case 2 -> {
+                case 2:
                     Subtracao sub = new Subtracao();
                     System.out.println(x + " - " + y + " = " + sub.calcula(x, y));
+                    break;
 
-                } case 3 -> {
+                case 3:
                     Multiplicacao mult = new Multiplicacao();
                     System.out.println(x + " * " + y + " = " + mult.calcula(x, y));
+                    break;
 
-                } case 4 -> {
+                case 4:
                     Divisao div = new Divisao();
                     System.out.println(x + " / " + y + " = " + div.calcula(x, y));
+                    break;
 
-                } default -> {
+                default:
                     if (opcao != 0) System.out.println("Opcão inválida, digite um número entre 0 e 4.");
-                }
             }
         } while(opcao != 0);
         

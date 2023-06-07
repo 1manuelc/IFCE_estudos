@@ -17,7 +17,8 @@ public class Main {
 
     public static void imprimirLista(List<Object> vetorObj) {
         System.out.println("\nExibição das formas criadas:");
-        for(int k = 0; k < vetorObj.size(); k++) {
+        
+        for(int k = 0; k < vetorObj.size(); k++) {  
             if(vetorObj.get(k) instanceof Circulo) {
                 Circulo circAtual = (Circulo) vetorObj.get(k);
 
@@ -39,6 +40,7 @@ public class Main {
                 System.out.println("Area = " + retAtual.area());
                 System.out.println("Perímetro = " + retAtual.perimetro());
             }
+            
             System.out.println();
         }
     }
@@ -46,6 +48,7 @@ public class Main {
     public static List<Object> povoarLista(int qtdObj, List<Object> vetorObj) {
         Scanner scanner = new Scanner(System.in);
         int i = 0;
+
         while(i < qtdObj) {
             int opcao;
             imprimirMenu(i);
@@ -60,6 +63,7 @@ public class Main {
                     Circulo circ = new Circulo(raio);
                     vetorObj.add(circ);
                     break;
+                    
                 case 2:
                     double lado;
                     System.out.println("Digite o lado desejado para o quadrado: ");
@@ -68,6 +72,7 @@ public class Main {
                     Quadrado quad = new Quadrado(lado);
                     vetorObj.add(quad);
                     break;
+                    
                 case 3:
                     double base, altura;
                     System.out.println("Digite a base desejada para o retângulo: ");
@@ -79,6 +84,7 @@ public class Main {
                     Retangulo retan = new Retangulo(base, altura);
                     vetorObj.add(retan);
                     break;
+
                 default:
                     while (opcao < 0 || opcao > 3) {
                         System.out.println("Opção inválida, digite novamente");
@@ -88,6 +94,7 @@ public class Main {
             i++;
         }
 
+        scanner.close();
         return vetorObj;
     }
 
@@ -98,6 +105,7 @@ public class Main {
 
         System.out.println("Digite a quantidade de formas que deseja criar: ");
         qtdeFormas = scanner.nextInt();
+        scanner.close();
 
         vetorObjetos = povoarLista(qtdeFormas, vetorObjetos);
         imprimirLista(vetorObjetos);
