@@ -4,7 +4,7 @@ import S3.POO.Aula20_ex_revisao.src.classes.ContaCorrente;
 import S3.POO.Aula20_ex_revisao.src.classes.ContaPoupanca;
 import S3.POO.Aula20_ex_revisao.src.classes.SeguroDeVida;
 
-public class TestaTributavel {
+public class TesteTributavel {
     public static void main(String[] args) {
         ContaCorrente corrente = new ContaCorrente(500);
         ContaPoupanca poupanca = new ContaPoupanca(200);
