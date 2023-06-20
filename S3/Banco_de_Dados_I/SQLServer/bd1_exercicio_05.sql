@@ -1,6 +1,6 @@
 Use Empresa
 
--- Exercício 05 - SELECT (13/06/2023)
+-- Exercï¿½cio 05 - SELECT (13/06/2023)
 
 /* 1) Exibir todos os dados das categorias. */
 SELECT * FROM Categorias
@@ -10,10 +10,10 @@ SELECT Nome
 FROM Clientes
 ORDER BY Nome
 
-/* 3) Exibir o nome dos funcionários de cargo gerente
-(existem vários gerentes, por exemplo gerente de vendas,
+/* 3) Exibir o nome dos funcionï¿½rios de cargo gerente
+(existem vï¿½rios gerentes, por exemplo gerente de vendas,
 gerente de marketing), que residem no Brasil e cujo 
-salário é superior a R$ 1500.*/
+salï¿½rio ï¿½ superior a R$ 1500.*/
 SELECT Nome
 FROM Funcionarios
 WHERE
@@ -21,9 +21,9 @@ WHERE
 	Pais = 'Brasil' AND
 	Salario > 1500
 
-/* 4) Exibir os produtos que não estão descontinuados,
-cujo preço é maior ou igual a 10 e menor ou igual a 100 e
-cuja unidade é diferente de nulo.*/
+/* 4) Exibir os produtos que nï¿½o estï¿½o descontinuados,
+cujo preï¿½o ï¿½ maior ou igual a 10 e menor ou igual a 100 e
+cuja unidade ï¿½ diferente de nulo.*/
 SELECT * FROM Produtos
 WHERE
 	Descontinuado = 0 AND
@@ -31,58 +31,58 @@ WHERE
 	Unidades IS NOT NULL
 
 /* 5) Exibir o nome da empresa e o contato dos fornecedores 
-da Itália, Noruega, Alemanha ou Reino Unido. Renomeie o nome 
+da Itï¿½lia, Noruega, Alemanha ou Reino Unido. Renomeie o nome 
 da empresa para Fornecedor e o contato para Telefone. Ordene o
 resultado pelo nome da empresa.*/
 SELECT Empresa 'Fornecedor', Contato 'Telefone'
 FROM Fornecedores
 WHERE
-	Pais = 'Itália' OR Pais = 'Noruega' OR
+	Pais = 'Itï¿½lia' OR Pais = 'Noruega' OR
 	Pais = 'Alemanha' OR Pais = 'Reino Unido'
+ORDER BY Fornecedor
 
-/* 6) Exibir o maior salário, o menor salário e a média salário dos
-funcionários por país.*/
+/* 6) Exibir o maior salï¿½rio, o menor salï¿½rio e a mï¿½dia salï¿½rio dos
+funcionï¿½rios por paï¿½s.*/
 SELECT	Pais, MAX(Salario) 'MAIOR_SALARIO', 
 		MIN(Salario) 'MENOR_SALARIO', 
 		AVG(Salario) 'MEDIA_SALARIO'
 FROM Funcionarios
 GROUP BY Pais
 
-/* 7) Exibir o maior salário dos funcionários de cargo Gerente
-(existem vários gerentes, por exemplo gerente de vendas, gerente
+/* 7) Exibir o maior salï¿½rio dos funcionï¿½rios de cargo Gerente
+(existem vï¿½rios gerentes, por exemplo gerente de vendas, gerente
 de marketing) e que residem no Brasil.*/
 SELECT MAX(Salario) 'MAIOR_SALARIO'
 FROM Funcionarios
-WHERE
-	Cargo LIKE 'Gerente%' AND Pais = 'Brasil'
+WHERE Cargo LIKE 'Gerente%' AND Pais = 'Brasil'
 
-/* 8) Exibir o maior salário dos funcionários de cada uma das 
-cidades Tianguá, Viçosa, Ubajara e Ibiapina. Ordene o resultado
-pelo maior salário.*/
+/* 8) Exibir o maior salï¿½rio dos funcionï¿½rios de cada uma das 
+cidades Tianguï¿½, Viï¿½osa, Ubajara e Ibiapina. Ordene o resultado
+pelo maior salï¿½rio.*/
 SELECT Cidade, MAX(Salario) 'MAIOR_SALARIO'
 FROM Funcionarios
 WHERE 
-	Cidade LIKE 'Tiangu[áa]' OR
-	Cidade LIKE 'Vi[çc]osa' OR
+	Cidade LIKE 'Tiangu[ï¿½a]' OR
+	Cidade LIKE 'Vi[ï¿½c]osa' OR
 	Cidade = 'Ubajara' OR
 	Cidade = 'Ibiapina'
 GROUP BY Cidade
 ORDER BY MAIOR_SALARIO DESC
 
-/* 9) Exibir a média de salário dos funcionários de cargo 
+/* 9) Exibir a mï¿½dia de salï¿½rio dos funcionï¿½rios de cargo 
 Coordenador (considere que podem existir
-diversos coordenadores) por cidade. Ordene o resultado pela média
-de salário.*/
+diversos coordenadores) por cidade. Ordene o resultado pela mï¿½dia
+de salï¿½rio.*/
 SELECT Cidade, AVG(Salario) 'MEDIA_SALARIO'
 FROM Funcionarios
 WHERE Cargo LIKE 'Coordenador%'
 GROUP BY Cidade
 ORDER BY MEDIA_SALARIO DESC
 
-/* 10) Exibir o número do pedido e o valor total do pedido. 
-Considere que o valor total de um pedido é obtido a partir do 
-somatório do preço do produto * Qtde – Desconto. 
-Ordene o resultado pelo número do pedido.*/
+/* 10) Exibir o nï¿½mero do pedido e o valor total do pedido. 
+Considere que o valor total de um pedido ï¿½ obtido a partir do 
+somatï¿½rio do preï¿½o do produto * Qtde ï¿½ Desconto. 
+Ordene o resultado pelo nï¿½mero do pedido.*/
 SELECT NumPed, SUM(Preco * Qtde - Desconto) 'TOTAL_PEDIDO'
 FROM DetalhesPed
 GROUP BY NumPed
@@ -96,9 +96,9 @@ GROUP BY CodCategoria
 HAVING COUNT(*) > 10
 ORDER BY QTD_PROD
 
-/* 12) Exibir a quantidade de produtos cujo preço é superior a 5.00
+/* 12) Exibir a quantidade de produtos cujo preï¿½o ï¿½ superior a 5.00
 e inferior a 10.00, por fornecedor. Exibir apenas os fornecedores
-que possuem mais de um produto nessa condição. Ordene o resultado 
+que possuem mais de um produto nessa condiï¿½ï¿½o. Ordene o resultado 
 pela quantidade.*/
 SELECT CodFor, COUNT(*) 'QTD_PROD'
 FROM Produtos
@@ -107,25 +107,25 @@ GROUP BY CodFor
 HAVING COUNT(*) > 1
 ORDER BY QTD_PROD
 
-/* 13) Exibir o somatório do salário dos funcionários de cargo
-Gerente ou Coordenador. Ordene o resultado pelo somatório. 
-Renomeie a coluna para Total. Exiba também o cargo.*/
+/* 13) Exibir o somatï¿½rio do salï¿½rio dos funcionï¿½rios de cargo
+Gerente ou Coordenador. Ordene o resultado pelo somatï¿½rio. 
+Renomeie a coluna para Total. Exiba tambï¿½m o cargo.*/
 SELECT Cargo, SUM(Salario) 'TOTAL'
 FROM Funcionarios
 WHERE Cargo LIKE 'Gerente%' OR Cargo LIKE 'Coordenador%'
 GROUP BY Cargo
 ORDER BY TOTAL DESC
 
-/* 14) Exibir a média de salário dos funcionários de acordo com o
-País. Exibir apenas os países que possuem mais de 5 funcionários.*/
+/* 14) Exibir a mï¿½dia de salï¿½rio dos funcionï¿½rios de acordo com o
+Paï¿½s. Exibir apenas os paï¿½ses que possuem mais de 5 funcionï¿½rios.*/
 SELECT Pais, AVG(Salario) 'MEDIA_SALARIO'
 FROM Funcionarios
 GROUP BY Pais
 HAVING COUNT(*) > 5
 
-/* 15) Exibir a quantidade de produtos e a média de preço dos
+/* 15) Exibir a quantidade de produtos e a mï¿½dia de preï¿½o dos
 produtos descontinuados de cada categoria que possui mais de
-10 produtos. Ordene o resultado pela média de preço.*/
+10 produtos. Ordene o resultado pela mï¿½dia de preï¿½o.*/
 SELECT COUNT(*) 'QTDE_PROD', AVG(Preco) 'MEDIA_PRECO'
 FROM Produtos
 WHERE Descontinuado = 1
