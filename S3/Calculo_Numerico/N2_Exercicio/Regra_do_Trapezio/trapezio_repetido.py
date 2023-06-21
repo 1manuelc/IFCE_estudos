@@ -39,13 +39,15 @@ def trapezioRepetido(a, b, n):
     contador = 0
 
     while(abs(i - b) > 1e-9):
-        contador += 1
-        
-        if(i == a or i == b): somatorio += f(i)
+        if(i == a): somatorio += f(i)
         else: somatorio += 2 * f(i)
         
         coordenadas.append((contador, i, somatorio))
         i += intervaloH
+        contador += 1
+    
+    somatorio += f(b)
+    coordenadas.append((contador, i, somatorio))
 
     somatorio *= (intervaloH / 2)
     return (somatorio, coordenadas)

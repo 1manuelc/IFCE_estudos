@@ -10,14 +10,16 @@ def calcularErro(valor):
     return (erro, percentual)
 
 def imprimirResultados(resultadoFinal, erro):
-    print('\nMétodo do Trapézio Simples\nResultado final:', resultadoFinal)
+    print('\nMétodo de 1/3 de Simpson Simples\nResultado final:', resultadoFinal)
     print('Erro de', erro[0])
     print('Corresponde a', erro[1], 'do resultado-alvo (-47.9915748014691)')
 
-def trapezioSimples(a, b):
-    intervaloH = b - a
-    return (intervaloH / 2) * (f(a) + f(b))
+def simpson13Simples(a, b):
+    intervaloH = (b - a) / 2
 
-resultado = trapezioSimples(1, 3)
-valorErro = calcularErro(resultado)
-imprimirResultados(resultado, valorErro)
+    return (intervaloH / 3) * (f(a) + (4 * f(a + intervaloH)) + f(b))
+
+resultado = simpson13Simples(1, 3)
+erro = calcularErro(resultado)
+
+imprimirResultados(resultado, erro)
