@@ -9,22 +9,24 @@ import java.util.List;
 public class Trabalhador {
     private String nomeTrabalhador;
     private NivelTrabalhador nivel;
+    
     private Double salarioBase;
     private Departamento departamento;
     private List<ContratoHora> contratos = new ArrayList<>();
-
+    
     public Trabalhador() {}
     public Trabalhador(String nomeTrabalhador, NivelTrabalhador nivel, Double salarioBase,
-                       Departamento departamento) {
+    Departamento departamento) {
         this.nomeTrabalhador = nomeTrabalhador;
         this.nivel = nivel;
         this.salarioBase = salarioBase;
         this.departamento = departamento;
     }
-
+    
     public String getNomeTrabalhador() {return nomeTrabalhador;}
+    public NivelTrabalhador getNivel() {return nivel;}
     public Departamento getDepartamento() {return departamento;}
-
+    
     public void adicionarContrato(ContratoHora contrato) {contratos.add(contrato);}
     public void removerContrato(ContratoHora contrato) {contratos.remove(contrato);}
 
