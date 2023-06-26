@@ -1,6 +1,7 @@
-package S3.POO.Aula21_Avaliacao.src.aplicacao;
+package S3.POO.Aula21_Avaliacao3.src.aplicacao;
 
-import S3.POO.Aula21_Avaliacao.src.classes.*;
+import S3.POO.Aula21_Avaliacao3.src.classes.*;
+
 import java.util.Scanner;
 
 public class Main {

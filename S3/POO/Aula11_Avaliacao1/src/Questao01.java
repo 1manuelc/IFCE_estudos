@@ -3,7 +3,7 @@
     reajuste todos os salários em 10%. Em seguida, exiba todos os salários já
     reajustados. Utilize vetor para armazenar os salários. (5pt)
 */
-package S3.POO.Aula11_Avaliacao.src;
+package S3.POO.Aula11_Avaliacao1.src;
 
 import java.util.Scanner;
 

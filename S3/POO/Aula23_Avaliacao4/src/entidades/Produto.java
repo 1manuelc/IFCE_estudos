@@ -1,4 +1,4 @@
-package S3.POO.Aula23_Avaliacao.src.entidades;
+package S3.POO.Aula23_Avaliacao4.src.entidades;
 
 public class Produto {
     private String nomeProduto;

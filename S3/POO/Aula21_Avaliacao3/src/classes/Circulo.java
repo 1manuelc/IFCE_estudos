@@ -1,6 +1,6 @@
-package S3.POO.Aula21_Avaliacao.src.classes;
+package S3.POO.Aula21_Avaliacao3.src.classes;
 
-import S3.POO.Aula21_Avaliacao.src.interfaces.*;
+import S3.POO.Aula21_Avaliacao3.src.interfaces.*;
 
 public class Circulo implements FormaGeometrica, Impressao {
     private double raio;

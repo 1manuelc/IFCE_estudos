@@ -1,6 +1,6 @@
-package S3.POO.Aula23_Avaliacao.src.entidades;
+package S3.POO.Aula23_Avaliacao4.src.entidades;
 
-import S3.POO.Aula23_Avaliacao.src.enums.StatusDoPedido;
+import S3.POO.Aula23_Avaliacao4.src.enums.StatusDoPedido;
 
 import java.util.Date;
 import java.util.List;

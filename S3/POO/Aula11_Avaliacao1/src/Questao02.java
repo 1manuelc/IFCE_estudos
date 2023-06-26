@@ -4,7 +4,7 @@
     todas as notas maiores do que a média calculada. (5pt)
 */
 
-package S3.POO.Aula11_Avaliacao.src;
+package S3.POO.Aula11_Avaliacao1.src;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package S3.POO.Aula16_Avaliacao.src;
+package S3.POO.Aula16_Avaliacao2.src;
 
 public class TesteIngressos {
     public static void main(String[] args) {

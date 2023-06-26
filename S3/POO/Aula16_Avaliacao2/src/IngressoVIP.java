@@ -1,4 +1,4 @@
-package S3.POO.Aula16_Avaliacao.src;
+package S3.POO.Aula16_Avaliacao2.src;
 
 public class IngressoVIP extends Ingresso {
     private double valorAdicional;

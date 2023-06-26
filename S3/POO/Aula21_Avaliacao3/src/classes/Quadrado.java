@@ -1,6 +1,6 @@
-package S3.POO.Aula21_Avaliacao.src.classes;
+package S3.POO.Aula21_Avaliacao3.src.classes;
 
-import S3.POO.Aula21_Avaliacao.src.interfaces.FormaGeometrica;
+import S3.POO.Aula21_Avaliacao3.src.interfaces.FormaGeometrica;
 
 public class Quadrado implements FormaGeometrica {
     private double lado;
