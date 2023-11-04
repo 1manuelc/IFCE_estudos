@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="painelGeral" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Component id="painelResultado" max="32767" attributes="0"/>
+              <EmptySpace min="33" pref="33" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="painelGeral" alignment="0" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+              <Component id="painelResultado" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="painelGeral">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="23" pref="23" max="-2" attributes="0"/>
+                          <Component id="tituloFrame" min="-2" pref="403" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="2" attributes="0">
+                          <EmptySpace min="35" pref="35" max="-2" attributes="0"/>
+                          <Component id="painelDadosPessoais" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="painelCalculoSalario" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="tituloFrame" min="-2" pref="29" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+                  <Component id="painelDadosPessoais" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Component id="painelCalculoSalario" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="painelDadosPessoais">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder title="Dados Pessoais">
+                  <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                    <EtchetBorder/>
+                  </Border>
+                  <Font PropertyName="font" name="Arial" size="12" style="0"/>
+                </TitledBorder>
+              </Border>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="labelEndereco" min="-2" pref="64" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtEndereco" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="labelNome" max="32767" attributes="0"/>
+                                  <Component id="labelIdade" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="txtIdade" max="32767" attributes="0"/>
+                                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                                      <Component id="labelSexo" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+                                      <Component id="comboBoxSexo" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="txtNome" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="labelNome" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtNome" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="labelIdade" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelSexo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtIdade" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="comboBoxSexo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="labelEndereco" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtEndereco" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="labelNome">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="14" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Nome:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelIdade">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="14" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Idade:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelSexo">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="14" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Sexo:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelEndereco">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="14" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Endere&#xe7;o"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtNome">
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtIdade">
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtEndereco">
+            </Component>
+            <Component class="javax.swing.JComboBox" name="comboBoxSexo">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="14" style="0"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="3">
+                    <StringItem index="0" value="Masculino"/>
+                    <StringItem index="1" value="Feminino"/>
+                    <StringItem index="2" value="N&#xe3;o bin&#xe1;rio"/>
+                  </StringArray>
+                </Property>
+                <Property name="selectedIndex" type="int" value="-1"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="tituloFrame">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="17" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="C&#xe1;lculo de Sal&#xe1;rio L&#xed;quido - Desconto do INSS"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JPanel" name="painelCalculoSalario">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder title="C&#xe1;lculo do Sal&#xe1;rio">
+                  <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                    <EtchetBorder/>
+                  </Border>
+                  <Font PropertyName="font" name="Arial" size="12" style="0"/>
+                </TitledBorder>
+              </Border>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="labelValorHora" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="txtValorHora" min="-2" pref="187" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="labelQtdHoras" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="txtQtdeHoras" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="labelValorHora" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtValorHora" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="labelQtdHoras" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtQtdeHoras" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="12" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="labelValorHora">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="14" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Valor da hora trabalhada:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelQtdHoras">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="14" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Horas trabalhadas:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtValorHora">
+              <Properties>
+                <Property name="toolTipText" type="java.lang.String" value="N&#xe3;o deve exceder R$ 200,00"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtValorHoraActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtQtdeHoras">
+              <Properties>
+                <Property name="toolTipText" type="java.lang.String" value="N&#xe3;o exceder 40hrs"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="painelResultado">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Resultado">
+              <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                <EtchetBorder/>
+              </Border>
+              <Font PropertyName="font" name="Arial" size="12" style="0"/>
+            </TitledBorder>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="txtSalarioLiquido" max="32767" attributes="0"/>
+                      <Component id="labelSalarioLiquido" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="btnCalcular" min="-2" pref="89" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="btnLimpar" min="-2" pref="89" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="labelDescontoINSS" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="txtDescontoINSS" min="-2" pref="76" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="30" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="labelDescontoINSS" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtDescontoINSS" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="labelSalarioLiquido" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="txtSalarioLiquido" min="-2" pref="46" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btnCalcular" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                      <Component id="btnLimpar" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="btnLimpar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Limpar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLimparActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnCalcular">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Calcular"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCalcularActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="labelDescontoINSS">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="13" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Desconto do INSS:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtDescontoINSS">
+          <Properties>
+            <Property name="enabled" type="boolean" value="false"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="labelSalarioLiquido">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="13" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Sal&#xe1;rio L&#xed;quido:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="txtSalarioLiquido">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="22" style="0"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="cc" red="33" type="rgb"/>
+            </Property>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
