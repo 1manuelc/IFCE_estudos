@@ -1,6 +1,7 @@
 # vscode and intellij folder
 .vscode
 .idea
+node_modules
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
