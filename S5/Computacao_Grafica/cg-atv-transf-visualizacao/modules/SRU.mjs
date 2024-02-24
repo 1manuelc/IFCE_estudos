@@ -37,7 +37,7 @@ export class SRU {
 		try {
 			this.sruMatrix[point.x - 1][point.y - 1] = point.alias;
 		} catch (error) {
-			throw new Error('Posição do ponto não existe no SRU');
+			throw new Error('[Bad input] Point coordinates doesn\'t exist on defined SRU.');
 		}
 	}
 }
