@@ -14,7 +14,7 @@ import { Circle } from './modules/SharedVertex/Circle.mjs';
 
 	console.log('\n--- CIRCLE DEFINITION ---');
 	const radius = questionInt('Type the radius of the circle: ');
-	const facesNumber = questionInt('Type the number of faces/segment: ');
+	const facesNumber = questionInt('Type the number of faces/segments: ');
 
 	sharedVertex = circle.mapCircle(radius, facesNumber, sharedVertex, sru);
 	circle.drawCircle(sru, sharedVertex);
