@@ -6,7 +6,7 @@ export class Point {
 	ndcy;
 
 	constructor(alias, x, y, sru) {
-		this.alias = alias.substring(0, 2);
+		this.alias = alias.substring(0, 3);
 		this.x = x;
 		this.y = y;
 
