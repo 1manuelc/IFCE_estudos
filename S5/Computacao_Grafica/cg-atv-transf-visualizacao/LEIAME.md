@@ -19,6 +19,9 @@ Para visualizar graficamente de forma interativa o desenho de círculo através 
 
 ## Comandos para execução
 
+Primeiramente, instale as dependências necessárias através do comando npm:
+`npm i` ou `npm install`
+
 Para executar o programa principal contido em "index.mjs", você deve utilizar:
 
 `npm run dev` ou `node index.mjs`
