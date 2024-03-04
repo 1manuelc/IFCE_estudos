@@ -7,8 +7,6 @@ pygame.init()
 min_circles = 3
 max_circles = 200
 
-width, height = 1920, 1080
-center = (width // 2, height // 2)
 radius = 580
 num_triangles = 3
 show_internal_borders = False
