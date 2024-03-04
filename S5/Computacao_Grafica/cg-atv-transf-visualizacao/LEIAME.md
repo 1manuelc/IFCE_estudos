@@ -2,8 +2,10 @@
 
 Os módulos a seguir foram desenvolvidos para resolução de atividades práticas da disciplina de Computação Gráfica, que foram:
 
-- Atividade Prática de Transformação de Visualização
+- Atividade Prática de Transformação de Visualização.
 - Atividade Prática de Desenho de Círculo através de triângulos utilizando a Estrutura de Dados "Shared Vertex".
+
+*[Você pode encontrar o diretório do projeto hospedado originalmente no repositório "IFCE_Estudos" no GitHub.](https://github.com/1manuelc/IFCE_estudos/tree/main/S5/Computacao_Grafica/cg-atv-transf-visualizacao)*
 
 # Para executar
 
