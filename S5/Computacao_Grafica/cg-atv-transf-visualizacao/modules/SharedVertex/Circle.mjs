@@ -52,8 +52,8 @@ export class Circle {
 
 	drawCircle(sru, sharedVertex) {
 		sharedVertex.faceList.forEach((face) => {
-			face.vertexIndexes.forEach((vertexIndex) => {
-				sru.attributePoint(sharedVertex.vertexList[vertexIndex].point);
+			face.vertexIndexes.forEach((index) => {
+				sru.attributePoint(sharedVertex.vertexList[index].point);
 			});
 		});
 	}
