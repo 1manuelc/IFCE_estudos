@@ -11,11 +11,11 @@ import { SharedVertex } from './modules/SharedVertex/SharedVertex.mjs';
 	let sharedVertex = new SharedVertex(sru, 'circle');
 	sharedVertex.showMatrix();
 
-	// Translação do círculo
-	sharedVertex.translateObject(1, -2);
+	// Translação do círculo (x, y)
+	sharedVertex.moveObject(1, -2);
 	sharedVertex.showMatrix();
 
-	// Espelhamento do círculo
+	// Espelhamento do círculo ('h', 'v' ou '*')
 	sharedVertex.flipObject('h');
 	sharedVertex.showMatrix();
 })();

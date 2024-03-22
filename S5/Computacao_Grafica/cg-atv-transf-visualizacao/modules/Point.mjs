@@ -31,16 +31,16 @@ export class Point {
      (ndcx: ${this.ndcx}, ndcy: ${this.ndcy})`;
 	}
 
-	translate(xFactor, yFactor) {
-		this.x += xFactor;
-		this.y += yFactor;
-		return this;
-	}
-
 	convertToCartesian(sru) {
 		const newX = sru.centralPoint.x - this.x;
 		const newY = sru.centralPoint.y - this.y;
 		return new Point(`${this.alias}'m`, newX, newY, sru);
+	}
+
+	move(xFactor, yFactor) {
+		this.x += xFactor;
+		this.y += yFactor;
+		return this;
 	}
 
 	flip(factor) {

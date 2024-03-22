@@ -23,12 +23,12 @@ export class SharedVertex {
 		this.vertexList.push(v);
 	}
 
-	translateObject(x, y) {
+	moveObject(x, y) {
 		this.sru.clean();
-		this.vertexList.forEach((vertex) => vertex.point.translate(x, y));
+		this.vertexList.forEach((vertex) => vertex.point.move(x, y));
 		this.polygon.draw(this.sru, this);
 		this.sru.attributePoint(this.sru.centralPoint);
-		console.log(`Translate (${x}, ${y}) operation done`);
+		console.log(`Move (${x}, ${y}) operation done`);
 	}
 
 	flipObject(factor) {
