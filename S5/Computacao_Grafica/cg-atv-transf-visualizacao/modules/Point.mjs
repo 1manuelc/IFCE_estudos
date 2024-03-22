@@ -6,7 +6,7 @@ export class Point {
 	ndcy;
 
 	constructor(alias, x, y, sru) {
-		this.alias = alias.substring(0, 3);
+		this.alias = alias;
 		this.x = x;
 		this.y = y;
 
@@ -29,5 +29,28 @@ export class Point {
 	getAllCoordinates() {
 		return `${this.alias} = (x: ${this.x}, y: ${this.y})
      (ndcx: ${this.ndcx}, ndcy: ${this.ndcy})`;
+	}
+
+	translate(xFactor, yFactor) {
+		this.x += xFactor;
+		this.y += yFactor;
+		return this;
+	}
+
+	convertToCartesian(sru) {
+		const newX = sru.centralPoint.x - this.x;
+		const newY = sru.centralPoint.y - this.y;
+		return new Point(`${this.alias}'m`, newX, newY, sru);
+	}
+
+	flip(factor) {
+		if (factor.match('h')) this.x *= -1;
+		else if (factor.match('v')) this.y *= -1;
+		else if (factor.match('/*')) {
+			this.x *= -1;
+			this.y *= -1;
+		}
+
+		this.alias += '\x1b[30mf\x1b[0m';
 	}
 }

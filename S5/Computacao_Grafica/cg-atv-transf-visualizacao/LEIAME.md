@@ -49,4 +49,4 @@ Toda representação de um elemento da <abbr title="Computação Gráfica">CG</a
 - Defina `Pontos` e fique á vontade para atribuir ao SRU e obter coordenadas simples e normalizadas.
 - Defina um <abbr title="Sistema de Referência do Dispositivo">`SRD`</abbr> e converta Pontos para as coordenadas do dispositivo, recebendo um tipo especial de ponto sem coordenadas normalizadas, o `SRD_Point`.
 - Utilize o módulo `SharedVertex.mjs` para implementar visualizações/desenhos de formas utilizando listas de **Faces** e **Vértices** de triângulos.
-- Utilize módulos adicionais dentro de _[SharedVertex](./modules/SharedVertex/)_ como `Circle.mjs` para auxiliar na transformação do SRU baseada na forma geométrica desejada.
+- Utilize declarações de polígonos no construtor de `SharedVertex.mjs` para compor polígonos conhecidos e realizar operações com métodos internos á mesma classe.

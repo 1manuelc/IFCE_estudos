@@ -3,14 +3,9 @@ import { Vertex } from './Vertex.mjs';
 import { Face } from './Face.mjs';
 
 export class Circle {
-	mapCircle(radius, segmentsNumber, sharedVertex, sru) {
+	trace(radius, segmentsNumber, sharedVertex, sru) {
 		const centralVertex = new Vertex(
-			new Point(
-				'v0',
-				Math.round(sru.sruMatrix.length / 2),
-				Math.round(sru.sruMatrix[0].length / 2),
-				sru,
-			),
+			new Point('\x1b[31mCc\x1b[0m', 0, 0, sru)
 		);
 
 		sharedVertex.attributeVertexToList(centralVertex);
@@ -19,7 +14,7 @@ export class Circle {
 		for (let i = 0; i < segmentsNumber; i++) {
 			const face = new Face(`f${i + 1}`);
 			face.attributeVertexIndexToFace(
-				sharedVertex.vertexList.indexOf(centralVertex),
+				sharedVertex.vertexList.indexOf(centralVertex)
 			);
 
 			for (let j = 0; j < 2; j++) {
@@ -29,10 +24,10 @@ export class Circle {
 				else angleInRads = 2 * Math.PI * ((i + 1) / segmentsNumber);
 
 				const x = Math.round(
-					centralVertex.point.x + radius * Math.cos(angleInRads),
+					centralVertex.point.x + radius * Math.cos(angleInRads)
 				);
 				const y = Math.round(
-					centralVertex.point.y + radius * Math.sin(angleInRads),
+					centralVertex.point.y + radius * Math.sin(angleInRads)
 				);
 
 				const vertex = new Vertex(new Point(`v${pointsCounter}`, x, y, sru));
@@ -40,7 +35,7 @@ export class Circle {
 				pointsCounter++;
 
 				face.attributeVertexIndexToFace(
-					sharedVertex.vertexList.indexOf(vertex),
+					sharedVertex.vertexList.indexOf(vertex)
 				);
 			}
 
@@ -50,7 +45,7 @@ export class Circle {
 		return sharedVertex;
 	}
 
-	drawCircle(sru, sharedVertex) {
+	draw(sru, sharedVertex) {
 		sharedVertex.faceList.forEach((face) => {
 			face.vertexIndexes.forEach((index) => {
 				sru.attributePoint(sharedVertex.vertexList[index].point);
