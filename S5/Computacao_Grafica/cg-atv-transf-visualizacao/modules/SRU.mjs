@@ -34,7 +34,7 @@ export class SRU {
 	printMatrix() {
 		console.log('');
 		this.sruMatrix.forEach((l) => {
-			console.log(`${l.join(' ')}`);
+			console.log(`${l.join('\t')}`);
 		});
 		console.log('');
 	}

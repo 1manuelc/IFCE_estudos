@@ -15,7 +15,7 @@ import { SharedVertex } from './modules/SharedVertex/SharedVertex.mjs';
 	sharedVertex.moveObject(1, -2);
 	sharedVertex.showMatrix();
 
-	// Espelhamento do círculo ('h', 'v' ou '*')
+	// Espelhamento do círculo ('h' = horizontal, 'v' = vertical ou '*' = diagonal)
 	sharedVertex.flipObject('h');
 	sharedVertex.showMatrix();
 })();
