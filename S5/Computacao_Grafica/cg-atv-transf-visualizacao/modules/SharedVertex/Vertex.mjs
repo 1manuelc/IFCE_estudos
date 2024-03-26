@@ -2,8 +2,8 @@ export class Vertex {
 	alias;
 	point;
 
-	constructor(p) {
-		this.point = p;
-		this.alias = p.alias;
+	constructor(point) {
+		this.point = point;
+		this.alias = point.alias;
 	}
 }

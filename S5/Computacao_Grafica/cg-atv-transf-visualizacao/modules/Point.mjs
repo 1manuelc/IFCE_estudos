@@ -37,10 +37,9 @@ export class Point {
 		return new Point(`${this.alias}'m`, newX, newY, sru);
 	}
 
-	move(xFactor, yFactor) {
-		this.x += xFactor;
-		this.y += yFactor;
-		return this;
+	move(x, y) {
+		this.x += x;
+		this.y += y;
 	}
 
 	flip(factor) {
