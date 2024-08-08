@@ -1,5 +1,0 @@
-cmake_minimum_required(VERSION 3.10)
-project(atv01-intro-opengl)
-set(CMAKE_CXX_STANDARD 11)
-add_executable(build atv01.cpp)
-target_link_libraries(build GL GLU glut)
