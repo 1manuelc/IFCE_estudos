@@ -1,17 +1,15 @@
-#include "vertex.cpp"
-#include <GL/glut.h>
-#include <stdio.h>
-
-#ifndef __Polygon__
-#define __Polygon__
+#ifndef POLYGON
+#define POLYGON
 #endif
 
-using namespace std;
+#include "vertex.cpp"
+
 
 class Polygon {
     private:
         vector<Vertex> vertexes;
         int num_vertexes;
+    
     public:
         Polygon() {};
         Polygon(int num_vtx) {
@@ -21,6 +19,7 @@ class Polygon {
             vertexes = vtx_arr_ext;
             num_vertexes = num_vtx;
         }
+
         void print_vtxs() {
             printf("[\n");
             for(int i = 0; i < num_vertexes; i++) {
@@ -31,8 +30,12 @@ class Polygon {
             }
             printf("]");
         }
+        
+        void set_vertexes(vector<Vertex> vtx_arr_ext) {
+            vertexes = vtx_arr_ext;
+        }
 
-        void draw2d(GLenum renderPrimitive, double scale) {
+        void draw2d(GLenum renderPrimitive, double scale = 1) {
             glBegin(renderPrimitive);
             for (int i = 0; i < num_vertexes; i++) {
                 glColor3f(vertexes[i].get_color()[0], vertexes[i].get_color()[1], vertexes[i].get_color()[2]);
@@ -40,8 +43,8 @@ class Polygon {
             }
             glEnd();
         }
-
-        void draw3d(GLenum renderPrimitive, double scale) {
+        
+        void draw3d(GLenum renderPrimitive, double scale = 1) {
             glBegin(renderPrimitive);
             for (int i = 0; i < num_vertexes; i++) {
                 glColor3f(vertexes[i].get_color()[0], vertexes[i].get_color()[1], vertexes[i].get_color()[2]);
@@ -49,9 +52,5 @@ class Polygon {
                 vertexes[i].get_z() * scale);
             }
             glEnd();
-        }
-
-        void set_vertexes(vector<Vertex> vtx_arr_ext) {
-            vertexes = vtx_arr_ext;
         }
 };
