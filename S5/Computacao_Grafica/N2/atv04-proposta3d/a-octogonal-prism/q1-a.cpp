@@ -1,7 +1,4 @@
-#include <GL/glut.h>
-#include <cmath>
-#include "../../../lib/polygon.cpp"
-#include "../../../lib/prisma3d.cpp"
+#include "../../../lib/polygl.h"
 
 struct CameraPosition {
     float eye_x, eye_y, eye_z;

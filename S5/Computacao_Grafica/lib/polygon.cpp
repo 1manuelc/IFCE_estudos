@@ -2,9 +2,6 @@
 #define POLYGON
 #endif
 
-#include "vertex.cpp"
-
-
 class Polygon {
     private:
         vector<Vertex> vertexes;

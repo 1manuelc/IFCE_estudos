@@ -1,7 +1,6 @@
 #include <GL/glut.h>
 #include <cmath>
-#include "../../../lib/polygon.cpp"
-#include "../../../lib/cone3d.cpp"
+#include "../../../lib/polygl.h"
 
 struct CameraPosition {
     float eye_x, eye_y, eye_z;
@@ -150,7 +149,7 @@ int main(int argc, char** argv) {
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH);
     
     glutInitWindowSize(800, 800);
-    glutCreateWindow("ATV04/Q1/A - Prisma Octogonal - Manuel Carlos");
+    glutCreateWindow("ATV04/Q1/B - Cone - Manuel Carlos");
     
     glutReshapeFunc(resize);
     glutDisplayFunc(display);
