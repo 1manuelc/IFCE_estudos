@@ -2,6 +2,7 @@
 .vscode
 .idea
 node_modules
+out
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
