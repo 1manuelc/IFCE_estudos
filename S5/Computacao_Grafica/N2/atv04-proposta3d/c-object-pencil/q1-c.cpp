@@ -26,10 +26,6 @@ CameraPosition currentCam = cam1;
 
 void configureAndClearBuffers() {
     glEnable(GL_DEPTH_TEST);
-
-    glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
@@ -120,11 +116,9 @@ void render() {
 
 void display() {
     glClearColor(0, 0, 0, 1);
-
     configureAndClearBuffers();
-
     render();
-    glFlush(); // Para GLUT_SINGLE, use glFlush em vez de glutSwapBuffers
+    glFlush();
 }
 
 void keyboard(unsigned char key, int x, int y) {

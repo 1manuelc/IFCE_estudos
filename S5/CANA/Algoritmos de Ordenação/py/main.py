@@ -4,34 +4,44 @@ import random
 import timeit
 
 
+# define um objeto-base para metodos de ordenacao
 @dataclass
 class OrderingMethod:
     name: str
-    function_name: str
     import_name: str
+    function_name: str
     plot_color: str
     timestamps: list
 
 
-# Colors wiki: https://matplotlib.org/stable/gallery/color/named_colors.html
+# define os metodos com base na dataclass
 bubbleSort = OrderingMethod(
-    "Bubble Sort", "bubble_sort", "bubble_sort", "royalblue", []
+    "Bubble Sort", "bruteforce_methods", "bubble_sort", "royalblue", []
 )
 insertionSort = OrderingMethod(
-    "Insertion Sort", "insertion_sort", "insertion_sort", "red", []
+    "Insertion Sort", "bruteforce_methods", "insertion_sort", "red", []
 )
 selectionSort = OrderingMethod(
-    "Selection Sort", "selection_sort", "selection_sort", "green", []
+    "Selection Sort", "bruteforce_methods", "selection_sort", "green", []
 )
-mergeSort = OrderingMethod("Merge Sort", "merge_sort", "merge_sort", "slategray", [])
-quickSort = OrderingMethod("Quick Sort", "quick_sort", "quick_sort", "deeppink", [])
+
+mergeSort = OrderingMethod(
+    "Merge Sort", "divide_and_conquer_methods", "merge_sort", "slategray", []
+)
+quickSort = OrderingMethod(
+    "Quick Sort", "divide_and_conquer_methods", "quick_sort", "deeppink", []
+)
+
 countingSort = OrderingMethod(
-    "Counting Sort", "counting_sort", "counting_sort", "darkorange", []
+    "Counting Sort", "linear_time_methods", "counting_sort", "darkorange", []
 )
-radixSort = OrderingMethod("Radix Sort", "radix_sort", "radix_sort", "gold", [])
+radixSort = OrderingMethod(
+    "Radix Sort", "linear_time_methods", "radix_sort", "gold", []
+)
 bucketSort = OrderingMethod(
-    "Bucket Sort", "bucket_sort", "bucket_sort", "darkturquoise", []
+    "Bucket Sort", "linear_time_methods", "bucket_sort", "darkturquoise", []
 )
+
 shellSort = OrderingMethod("Shell Sort", "shell_sort", "shell_sort", "navy", [])
 heapSort = OrderingMethod("Heap Sort", "heap_sort", "heap_sort", "lime", [])
 
@@ -65,23 +75,25 @@ def getRandomList(listSize: int) -> list:
     return random.sample(range(0, listSize * 2), listSize)
 
 
-def testMethod(sortFunctionName: str, listToSort: list) -> float:
+# testa um metodo e retorna seu tempo cronometrado de execucao
+def testMethod(method: OrderingMethod, listToSort: list) -> float:
     test_list = listToSort
 
     return timeit.timeit(
-        stmt=f"{sortFunctionName}({test_list})",
-        setup=f"from {sortFunctionName} import {sortFunctionName}",
+        stmt=f"{method.function_name}({test_list})",
+        setup=f"from {method.import_name} import {method.function_name}",
         number=1,
     )
 
 
+# coordena a cronometragem dos metodos e exibe seus tempos
 def evaluateMethods() -> None:
     for i in range(len(testSizes)):
         originalList = getRandomList(testSizes[i])
 
         print(f"List of size {testSizes[i]} ordered in:")
         for method in orderingMethods:
-            method.timestamps.append(testMethod(method.function_name, originalList))
+            method.timestamps.append(testMethod(method, originalList))
             print(f"\t{method.name}:\t{method.timestamps[i]:.4f} seconds")
         print()
 
@@ -107,6 +119,7 @@ def plotAnalysis() -> None:
     plt.show()
 
 
+# faz a media temporal dos metodos, para calcular o metodo mais rapido e mais devagar
 def summarizeResults() -> None:
     timeAveragePerMethod = []
 
