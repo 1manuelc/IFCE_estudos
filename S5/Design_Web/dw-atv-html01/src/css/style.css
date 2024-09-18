@@ -1,0 +1,77 @@
+@import url("./reset.css");
+@import url("./posts.css");
+
+body {
+	min-height: 100dvh;
+	background-color: #212121;
+	color: #fff;
+	font-size: 1.6rem;
+}
+
+a {
+	color: lightgreen;
+	text-decoration: none;
+	transition: opacity 75ms ease-in-out;
+}
+
+a:hover {
+	opacity: 0.6;
+}
+
+header {
+	padding: 2rem 2rem;
+
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2.4rem;
+
+	background-color: #323232;
+}
+
+header img {
+	height: 4.8rem;
+}
+
+header span {
+	display: flex;
+	gap: 1.6rem;
+
+	color: #fff;
+}
+
+.current-page-in-header {
+	font-weight: 600;
+}
+
+main {
+	display: flex;
+	flex-flow: column;
+	gap: 3.2rem;
+	padding: 3rem 2rem;
+}
+
+main h2 {
+	font-weight: 600;
+	font-size: 2.4rem;
+}
+
+hr {
+	border: 1px solid gray;
+	opacity: 0.2;
+}
+
+@media screen and (width > 572px) {
+	header {
+		flex-flow: row;
+		gap: 3.2rem;
+
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	header span {
+		gap: 3.2rem;
+	}
+}
