@@ -62,17 +62,17 @@ testSizes = [
     1000,
     3000,
     6000,
-    # 9000,
-    # 12000,
-    # 15000,
-    # 18000,
-    # 21000,
-    # 24000,
+    9000,
+    12000,
+    15000,
+    18000,
+    21000,
+    24000,
 ]
 
 
 def getRandomList(listSize: int) -> list:
-    return random.sample(range(0, listSize * 2), listSize)
+    return random.sample(range(0, listSize), listSize)
 
 
 # testa um metodo e retorna seu tempo cronometrado de execucao
