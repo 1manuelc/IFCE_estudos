@@ -9,7 +9,7 @@
 - Crie uma página onde você consiga ilustrar a separação de conteúdos com apoio das tags de linha e quebra de linha. (`<br>` e `<hr>`)
 - Implemente um exemplo que ilustre bem a navegação interna e externa por meio de links. Adicione imagens e tabelas na página.
 
-## Para executar lccalmente
+## Para executar localmente
 
 - clone o repositório para sua máquina ou baixe-o em zip e descompacte
 
