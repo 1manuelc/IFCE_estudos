@@ -1,6 +1,9 @@
 #ifndef PRISMA3D
 #define PRISMA3D
-#endif
+
+#include "polygl.h"
+using namespace std;
+class Polygon;
 
 class Prisma {
     private:
@@ -28,7 +31,7 @@ class Prisma {
 
             return vtxs_v;
         }
-        
+
         vector<vector<Vertex>> drawPrismaLateralFaces(vector<Vertex> bottom_base_vtxs, vector<Vertex> top_base_vtxs) {
             vector<vector<Vertex>> lat_vtxs_v(segments, vector<Vertex>(4));
 
@@ -66,7 +69,7 @@ class Prisma {
 
             return lat_vtxs_v;
         }
-        
+
     public:
         Prisma(int segments_n, double z_bottom, double z_top, double scale = 1) {
             segments = segments_n;
@@ -74,15 +77,15 @@ class Prisma {
             bottom_base_vtxs = drawPrismaBase(z_bottom);
             lateral_faces_vtxs = drawPrismaLateralFaces(bottom_base_vtxs, top_base_vtxs);
         }
-        
+
         void render3d(GLenum renderPrimitive) {
             glShadeModel(GL_SMOOTH);
 
             Polygon bottom_base(segments, bottom_base_vtxs);
-            bottom_base.draw3d(renderPrimitive);
+            bottom_base.render3d(renderPrimitive);
 
             Polygon top_base(segments, top_base_vtxs);
-            top_base.draw3d(renderPrimitive);
+            top_base.render3d(renderPrimitive);
 
             if(renderPrimitive == GL_POLYGON || renderPrimitive == GL_QUADS) {
                 glBegin(GL_QUADS);
@@ -99,3 +102,5 @@ class Prisma {
             glEnd();
         }
     };
+
+#endif

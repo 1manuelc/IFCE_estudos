@@ -1,16 +1,16 @@
 #ifndef POLYGL
 #define POLYGL
 
-#include <iostream>
 #include <vector>
+#include <iostream>
 #include <string>
 #include <GL/glut.h>
-#include <stdio.h>
-#include <math.h>
+#include <cstdio>
+#include <cmath>
 
 #include "vertex.cpp"
 #include "polygon.cpp"
-#include "prisma3d.cpp"
+#include "prisma.cpp"
 #include "cone3d.cpp"
 
 #endif
