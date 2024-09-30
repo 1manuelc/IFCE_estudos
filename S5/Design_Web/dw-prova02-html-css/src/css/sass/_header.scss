@@ -1,0 +1,45 @@
+header {
+	display: flex;
+	padding: 6.4rem 0 2.4rem 0;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2.4rem;
+	border-bottom: 0.2rem solid #6d26d1;
+
+	@media (width >= 768px) {
+		flex-flow: row;
+		padding: 3.2rem;
+		justify-content: space-between;
+	}
+
+	#header__logo {
+		display: flex;
+		width: 22rem;
+		height: 7.058rem;
+		padding: 0.8214rem 0.1461rem 0.7296rem 0rem;
+		justify-content: center;
+		align-items: flex-end;
+		gap: 1.0724rem;
+	}
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1.6rem;
+	align-self: stretch;
+	text-wrap: nowrap;
+
+	@media screen and (width < 768px) {
+		width: 100%;
+		overflow-x: scroll;
+		scroll-snap-type: x mandatory;
+
+		.container::-webkit-scrollbar {
+			background: transparent; /* Torna a scrollbar invisível */
+		}
+	}
+}

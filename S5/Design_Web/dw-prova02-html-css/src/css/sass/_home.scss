@@ -1,0 +1,87 @@
+.hero {
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 2.4rem;
+
+	@media (width > 768px) {
+		flex-flow: row;
+	}
+
+	.hero__content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 2.4rem;
+
+		p {
+			font-size: 2rem;
+		}
+	}
+
+	.hero__image {
+		width: 100%;
+
+		@media (width > 768px) {
+			width: 66rem;
+		}
+	}
+}
+
+.services {
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	gap: 2.4rem;
+	justify-content: center;
+	align-items: start;
+	overflow: auto;
+
+	ul {
+		display: flex;
+		justify-content: start;
+		align-items: start;
+		overflow-x: scroll;
+		gap: 2.4rem;
+
+		.service__card {
+			display: flex;
+			padding: 2.4rem;
+			align-items: flex-start;
+			gap: 1.2rem;
+			align-self: stretch;
+
+			border-radius: 2.4rem;
+			color: #fff;
+			background: $purple-200;
+
+			.service__card--block {
+				display: flex;
+				width: 26rem;
+				flex-direction: column;
+				align-items: start;
+				gap: 1.2rem;
+			}
+		}
+	}
+}
+
+.products {
+	display: flex;
+	flex-flow: column;
+	gap: 2.4rem;
+}
+
+.geographic {
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	gap: 2.4rem;
+	justify-content: center;
+
+	iframe {
+		width: 100%;
+		height: 48rem;
+	}
+}

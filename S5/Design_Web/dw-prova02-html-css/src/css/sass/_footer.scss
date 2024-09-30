@@ -1,0 +1,34 @@
+@import 'variables';
+
+footer {
+	display: flex;
+	padding: 2.4rem;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.2rem;
+
+	color: #fff;
+	background: $purple-800;
+
+	@media (width > 768px) {
+		flex-flow: row;
+		gap: 2.4rem;
+	}
+
+	#footer__logo {
+		width: 12rem;
+		height: 12.1754rem;
+
+		@media (width > 768px) {
+			width: 9.6rem;
+			height: 9.7403rem;
+		}
+	}
+
+	p {
+		@media (width > 768px) {
+			width: 55.5rem;
+		}
+	}
+}

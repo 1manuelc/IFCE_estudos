@@ -1,0 +1,18 @@
+@import 'variables';
+
+.block__text {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 2.4rem;
+
+	ul {
+		li {
+			list-style: disc;
+			&::marker {
+				color: $purple-300;
+			}
+		}
+	}
+}

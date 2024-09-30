@@ -1,0 +1,27 @@
+@import 'reset';
+@import 'header';
+@import 'footer';
+@import 'variables';
+@import 'main';
+@import 'home';
+@import 'quem_somos';
+@import 'form';
+@import 'blog';
+
+.button {
+	padding: 0.8rem 1.2rem;
+	cursor: pointer;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border-radius: 1.2rem;
+	background: $purple-200;
+	transition: all 80ms ease-in-out;
+	color: #fff;
+
+	&:hover {
+		background: $purple-300;
+	}
+}

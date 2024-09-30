@@ -1,0 +1,44 @@
+@import 'variables';
+
+.form__container {
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	gap: 2.4rem;
+
+	.button {
+		font-size: 1.6rem;
+		@media (width > 768px) {
+			width: 50%;
+		}
+	}
+
+	.form__item {
+		width: 100%;
+		@media (width > 768px) {
+			width: 50%;
+		}
+
+		display: flex;
+		flex-flow: column;
+		gap: 1.2rem;
+
+		label {
+			font-size: 1.6rem;
+			font-weight: 500;
+		}
+
+		input,
+		textarea {
+			width: calc(100% - (2 * 1.2rem));
+			padding: 1.2rem 0.8rem;
+			border-radius: 0.8rem;
+
+			font-family: 'Public Sans', Arial, sans-serif;
+			font-size: 1.6rem;
+			background-color: transparent;
+			border: 0.2rem solid $purple-200;
+			color: #000;
+		}
+	}
+}
