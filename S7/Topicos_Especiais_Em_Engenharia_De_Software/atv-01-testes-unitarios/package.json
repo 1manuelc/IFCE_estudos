@@ -1,0 +1,27 @@
+{
+  "name": "atv-01-testes-unitarios",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "q1": "tsx ./src/q1-calculator/q1-calculator.ts",
+    "q2": "tsx ./src/q2-roman/q2-roman.ts",
+    "q3": "tsx ./src/q3-morse/q3-morse.ts",
+    "test": "jest --verbose"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@types/jest": "30.0.0",
+    "@types/node": "24.0.3",
+    "@types/roman-numerals": "0.3.2",
+    "jest": "30.0.0",
+    "ts-jest": "29.4.0",
+    "tsx": "4.20.3"
+  },
+  "dependencies": {
+    "morse": "^0.1.0",
+    "roman-numerals": "0.3.2"
+  }
+}
