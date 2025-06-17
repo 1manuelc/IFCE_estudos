@@ -75,7 +75,7 @@ describe('Calculator class', () => {
 		});
 	});
 
-	describe('division()', () => {
+	describe('divide()', () => {
 		describe('Common cases', () => {
 			it('should divide positive numbers correctly', () => {
 				expect(calc.divide(1, 3)).toBe(1 / 3);
